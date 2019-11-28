@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/theming";
+
+// custom palette
+//colorpicker
+//http://mcg.mbitson.com/#!?mcgpalette0=%230c343d&mcgpalette1=%234c4c4c&themename=mcgtheme
+//tutorial
+// https://www.youtube.com/watch?v=PzybZVwSMXw
+/* For use in src/lib/core/theming/_palette.scss */
+$mat-personal-primary: (
+  50: #e2e7e8,
+  100: #b6c2c5,
+  200: #869a9e,
+  300: #557177,
+  400: #30525a,
+  500: #0c343d,
+  600: #0a2f37,
+  700: #08272f,
+  800: #062127,
+  900: #03151a,
+  A100: #58cfff,
+  A200: #25c1ff,
+  A400: #00acf1,
+  A700: #009ad8,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #ffffff
+  )
+);
+
+$mat-personal-accent: (
+  50: #eaeaea,
+  100: #c9c9c9,
+  200: #a6a6a6,
+  300: #828282,
+  400: #676767,
+  500: #4c4c4c,
+  600: #454545,
+  700: #3c3c3c,
+  800: #333333,
+  900: #242424,
+  A100: #f18080,
+  A200: #ec5252,
+  A400: #ff0c0c,
+  A700: #f10000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+$primary: mat-palette($mat-personal-primary);
+$accent: mat-palette($mat-personal-accent);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
